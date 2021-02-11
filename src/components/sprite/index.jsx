@@ -1,14 +1,13 @@
 import React from 'react'
 
 export default function Sprite({image, data, position}) {
-
   const {y, x, h, w} = data
   console.log(position.y);
   return (
 
   <div
     style={{
-      display: "absolute",
+      position: "absolute",
       top: position.y,
       left: position.x,
       height: `${h}px`,
@@ -18,6 +17,5 @@ export default function Sprite({image, data, position}) {
       backgroundPosition: `-${x}px -${y}px`
     }}
     />
-
   )
 }
