@@ -11,7 +11,6 @@ export default function Actor({
 
   const {h, w} = data;
   
-
   return (
 
     <Sprite

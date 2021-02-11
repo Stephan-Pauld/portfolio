@@ -2,7 +2,6 @@ import React from 'react'
 
 export default function Sprite({image, data, position}) {
   const {y, x, h, w} = data
-  console.log(position.y);
   return (
 
   <div

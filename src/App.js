@@ -9,7 +9,7 @@ import f2 from './assets/sprites/f2.png'
 export default function App() {
 
   return (
-    <div className="zone-container">
+    <div>
       <Player
       skin={m2}
       />
