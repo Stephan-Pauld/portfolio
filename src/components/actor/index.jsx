@@ -12,7 +12,6 @@ export default function Actor({
   const {h, w} = data;
   
   return (
-
     <Sprite
     image={sprite}
     position={position}
@@ -23,6 +22,5 @@ export default function Actor({
       h,
     }}
     />
-
   )
 }

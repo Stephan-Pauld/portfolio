@@ -38,7 +38,6 @@ export default function useWalk(maxSteps) {
   }
 
   const move = (dir) => {
-    console.log(position, dir);
     // if (position.x <= 0 || position.x === -16) {
     //   console.log("cats");
     //   setPosition(prev => ({
