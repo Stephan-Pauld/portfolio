@@ -12,12 +12,10 @@ export default function App() {
 
 
   return (
-    <div>
       <div>
       <Player
       skin={m2}
       />
-    </div>
     </div>
   )
 }

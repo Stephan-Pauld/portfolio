@@ -2,8 +2,11 @@ import React from 'react'
 
 export default function Sprite({image, data, position}) {
   const {y, x, h, w} = data
-  return (
 
+
+
+  return (
+<>
   <div
     style={{
       position: "absolute",
@@ -15,6 +18,15 @@ export default function Sprite({image, data, position}) {
       backgroundRepeat: "no-repeat",
       backgroundPosition: `-${x}px -${y}px`
     }}
-    />
+    >
+      <h5 style={{
+        position: "absolute",
+      top: '-33px',
+    }}>
+        X:{position.x}.
+        Y:{position.y}
+      </h5>
+  </div>
+    </>
   )
 }
