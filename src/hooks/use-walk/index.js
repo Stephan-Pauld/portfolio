@@ -47,13 +47,13 @@ export default function useWalk() {
         if (position.y <= 236) {
           if (position.x + baseLine <= 855) {
             setPosition(prev => ({
-              x: prev.x + 5,
+              x: prev.x + stepSize,
               y: prev.y,
             }));
           }
           if (position.x + baseLine >= 920) {
             setPosition(prev => ({
-              x: prev.x - 5,
+              x: prev.x - stepSize,
               y: prev.y,
             }));
           }
@@ -62,16 +62,16 @@ export default function useWalk() {
         // TOP BRIDGE ///
         /////////////////
         if (position.y > 236 && position.y < 346) {
-          if (position.x + baseLine <= 880) {
+          if (position.x + baseLine <= 880 && position.x + baseLine > 800) {
 
             setPosition(prev => ({
-              x: prev.x + 5,
+              x: prev.x + stepSize,
               y: prev.y,
             }));
           }
           if (position.x + baseLine >= 900) {
             setPosition(prev => ({
-              x: prev.x - 5,
+              x: prev.x - stepSize,
               y: prev.y,
             }));
           }
@@ -84,32 +84,72 @@ export default function useWalk() {
           if (position.y <= 356) {
             setPosition(prev => ({
               x: prev.x,
-              y: prev.y + 5,
+              y: prev.y + stepSize,
             }));
           }
           if (position.y >= 390) {
             setPosition(prev => ({
               x: prev.x,
-              y: prev.y - 5,
+              y: prev.y - stepSize,
             }));
           }
         }
-        //////////////////////////
-        // top left house area  //
-        //////////////////////////
-        if (position.x + baseLine <= 725) {
-          if (position.y <= 341) {
+        ////////////////////////////////////
+        // top left house area first half //
+        ////////////////////////////////////
+        if (position.x + baseLine <= 725 && position.x + baseLine > 590) {
+          if (position.y <= 330) {
             setPosition(prev => ({
               x: prev.x,
-              y: prev.y + 5,
+              y: prev.y + stepSize,
             }));
           }
-          // if (position.y >= 390) {
-          //   setPosition(prev => ({
-          //     x: prev.x,
-          //     y: prev.y - 5,
-          //   }));
-          // }
+          if (position.y >= 390) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y - stepSize,
+            }));
+          }
+        }
+        /////////////////////////
+        // top left FRONT DOOR //
+        ////////////////////////
+        if (position.x + baseLine <= 590 && position.x + baseLine > 570) {
+          if (position.y <= 296) {
+            console.log("Cat2");
+
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y + stepSize,
+            }));
+          }
+        }
+        if (position.x + baseLine < 590 && position.x + baseLine > 570) {
+          if (position.y <= 296) {
+            console.log("Cat2");
+
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y + stepSize,
+            }));
+          }
+        }
+        ////////////////////////////////////
+        // top left house area first half //
+        ////////////////////////////////////
+        if (position.x + baseLine <= 570 && position.x + baseLine > 470) {
+          if (position.y <= 330) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y + stepSize,
+            }));
+          }
+          if (position.x + baseLine <= 470) {
+            setPosition(prev => ({
+              x: prev.x + stepSize,
+              y: prev.y,
+            }));
+          }
         }
         move(dir)
       }
