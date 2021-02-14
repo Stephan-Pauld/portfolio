@@ -17,7 +17,9 @@ export default function Player({skin}) {
     walk(e.key.replace("Arrow", "").toLowerCase())
     e.preventDefault();
   })
-  
+
+
+  // Setting DOORS FOR PAGES
   // 1711 is width
   // 1061 is x @ 1711
   // 1160 @ 1920
@@ -30,7 +32,6 @@ export default function Player({skin}) {
   // console.log(width);
   // console.log(position.y);
   // console.log(position.x + aboutMeDoorX);
-
   // Door positions if screensize changes
   if (position.x + aboutMeDoorX > 1155 && position.x + aboutMeDoorX < 1176 && position.y === 306) {
     document.getElementById('root').style.backgroundImage = 'none'
