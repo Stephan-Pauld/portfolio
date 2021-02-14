@@ -1,25 +1,41 @@
 import React, { useState } from 'react'
+import useWindowSize from '../../hooks/window-size/useWindowSize'
 
-export default function useWalk(maxSteps) {
-  const [position, setPosition] = useState({ x: 816, y: 16 });
+export default function useWalk() {
+  const maxSteps = 3;
+  const {width, height} = useWindowSize()
+
+  const playerPosWidth = (1920 - width) / 2
+
+  const [position, setPosition] = useState({ x: 816 - playerPosWidth , y: 16 });
   const [dir, setDir] = useState(0);
   const [step, setStep] = useState(0);
-
+  const [positionWidth, setPositionWidth] = useState(width)
+  // console.log(positionWidth - width);
   const directions = {
     down: 0,
     left: 1,
     right: 2,
     up: 3,
   }
-
-  const stepSize = 16;
-
+  const stepSize = 5;
   const modifier = {
     down: { x: 0, y: stepSize },
     left: { x: -stepSize, y: 0 },
     right: { x: stepSize, y: 0 },
     up: { x: 0, y: -stepSize },
   };
+
+  if (positionWidth !== width){
+    const change = width - positionWidth 
+      setPositionWidth(width);
+      console.log(change);
+      setPosition({
+        x: position.x + change /2,
+        y: position.y,
+      });
+  }
+
 
   const walk = (dir) => {
     setDir(prev => {
@@ -38,13 +54,8 @@ export default function useWalk(maxSteps) {
   }
 
   const move = (dir) => {
-    // if (position.x <= 0 || position.x === -16) {
-    //   console.log("cats");
-    //   setPosition(prev => ({
-    //     x: 0,
-    //     y: prev.y
-    //   }));
-    // }
+    // console.log(window.innerWidth - window.innerHeight - position.x);
+
     setPosition(prev => ({
       x: prev.x + modifier[dir].x,
       y: prev.y + modifier[dir].y,

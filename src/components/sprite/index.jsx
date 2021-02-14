@@ -10,7 +10,7 @@ export default function Sprite({image, data, position}) {
   <div
     style={{
       position: "absolute",
-      top: position.y,
+      top: position.y ,
       left: position.x,
       height: `${h}px`,
       width: `${w}px`,
@@ -21,10 +21,13 @@ export default function Sprite({image, data, position}) {
     >
       <h5 style={{
         position: "absolute",
-      top: '-33px',
+      top: '-63px',
+      backgroundColor:'white',
     }}>
         X:{position.x}.
         Y:{position.y}
+        <br/>
+        width: {window.innerWidth}
       </h5>
   </div>
     </>
