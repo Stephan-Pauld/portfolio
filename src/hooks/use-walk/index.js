@@ -215,7 +215,7 @@ export default function useWalk() {
         /////////////////////////////////////
         // top right house area second half //
         /////////////////////////////////////
-        if (position.x + baseLine >= 1070 && position.x + baseLine < 1160) {
+        if (position.x + baseLine >= 1185 && position.x + baseLine <= 1315) {
           if (position.y <= 330) {
             setPosition(prev => ({
               x: prev.x,
@@ -226,6 +226,12 @@ export default function useWalk() {
             setPosition(prev => ({
               x: prev.x,
               y: prev.y - stepSize,
+            }));
+          }
+          if (position.x + baseLine >= 1315) {
+            setPosition(prev => ({
+              x: prev.x - stepSize,
+              y: prev.y,
             }));
           }
         }
