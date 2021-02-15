@@ -12,6 +12,7 @@ export default function Player({skin}) {
 
   const { dir, step, walk, position } = useWalk()
   const {width, height} = useWindowSize()
+  
   // console.log(width, height);
   useKeyPress((e) => {   
     walk(e.key.replace("Arrow", "").toLowerCase())

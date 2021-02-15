@@ -271,6 +271,18 @@ export default function useWalk() {
             }));
           }
         }
+        /////////////////////////////
+        // Bottom center Town fence //
+        /////////////////////////////
+        if (position.x + baseLine >= 860 && position.x + baseLine <= 920 && position.y > 591) {
+          if (position.y >= 616) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y - stepSize,
+            }));
+          }
+
+        }
         //////////////////////////////////////////
         // Bottom Town Area left side first half//
         //////////////////////////////////////////
