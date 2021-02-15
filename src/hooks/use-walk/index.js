@@ -87,7 +87,7 @@ export default function useWalk() {
               y: prev.y + stepSize,
             }));
           }
-          if (position.y >= 390) {
+          if (position.y >= 390 && position.y < 431) {
             setPosition(prev => ({
               x: prev.x,
               y: prev.y - stepSize,
@@ -105,10 +105,28 @@ export default function useWalk() {
               y: prev.y + stepSize,
             }));
           }
-          if (position.y >= 390) {
+          if (position.y >= 390 && position.y < 431) {
             setPosition(prev => ({
               x: prev.x,
               y: prev.y - stepSize,
+            }));
+          }
+        }
+        ////////////////////
+        // BOTTOM BRIDGE ///
+        ////////////////////
+        if (position.y > 401 && position.y < 506) {
+          if (position.x + baseLine <= 880 && position.x + baseLine > 800) {
+
+            setPosition(prev => ({
+              x: prev.x + stepSize,
+              y: prev.y,
+            }));
+          }
+          if (position.x + baseLine >= 900 && position.x + baseLine <= 970) {
+            setPosition(prev => ({
+              x: prev.x - stepSize,
+              y: prev.y,
             }));
           }
         }
@@ -122,7 +140,7 @@ export default function useWalk() {
               y: prev.y + stepSize,
             }));
           }
-          if (position.y >= 390) {
+          if (position.y >= 390 && position.y < 431) {
             setPosition(prev => ({
               x: prev.x,
               y: prev.y - stepSize,
@@ -185,7 +203,7 @@ export default function useWalk() {
               y: prev.y + stepSize,
             }));
           }
-          if (position.y >= 390) {
+          if (position.y >= 390 && position.y < 431) {
             setPosition(prev => ({
               x: prev.x,
               y: prev.y - stepSize,
@@ -232,6 +250,85 @@ export default function useWalk() {
             setPosition(prev => ({
               x: prev.x - stepSize,
               y: prev.y,
+            }));
+          }
+        }
+        /////////////////////////////
+        // Bottom center Town Area //
+        /////////////////////////////
+        if (position.y > 501 && position.y < 556) {
+
+          if (position.x + baseLine <= 870 && position.x + baseLine >= 815) {
+            setPosition(prev => ({
+              x: prev.x + stepSize,
+              y: prev.y,
+            }));
+          }
+          if (position.x + baseLine >= 920) {
+            setPosition(prev => ({
+              x: prev.x - stepSize,
+              y: prev.y,
+            }));
+          }
+        }
+        //////////////////////////////////////////
+        // Bottom Town Area left side first half//
+        //////////////////////////////////////////
+        if (position.x + baseLine < 860 && position.x >= 725 && position.y > 431) {
+
+          if (position.y >= 616) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y - stepSize,
+            }));
+          }
+          if (position.y <= 561) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y + stepSize,
+            }));
+          }
+        }
+        ////////////////////////////////////////
+        // Bottom Town Area left side door area //
+        //////////////////////////////////////////
+        if (position.x + baseLine <= 720 && position.x >= 700 && position.y > 431) {
+          if (position.y <= 521) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y + stepSize,
+            }));
+          }
+          if (position.y >= 616) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y - stepSize,
+            }));
+          }
+        }
+        ///////////////////////////////////////////
+        // Bottom Town Area left side second half//
+        //////////////////////////////////////////
+        if (position.x + baseLine < 700 && position.x >= 660 && position.y > 431) {
+
+          if (position.x + baseLine <= 660) {
+            setPosition(prev => ({
+              x: prev.x + stepSize,
+              y: prev.y,
+            }));
+          }
+
+          if (position.y >= 616) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y - stepSize,
+            }));
+          }
+
+          if (position.y <= 561) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y + stepSize,
             }));
           }
         }
