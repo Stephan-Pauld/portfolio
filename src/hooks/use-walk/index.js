@@ -264,7 +264,7 @@ export default function useWalk() {
               y: prev.y,
             }));
           }
-          if (position.x + baseLine >= 920) {
+          if (position.x + baseLine >= 920 && position.x + baseLine <= 955) {
             setPosition(prev => ({
               x: prev.x - stepSize,
               y: prev.y,
@@ -314,6 +314,67 @@ export default function useWalk() {
           if (position.x + baseLine <= 660) {
             setPosition(prev => ({
               x: prev.x + stepSize,
+              y: prev.y,
+            }));
+          }
+
+          if (position.y >= 616) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y - stepSize,
+            }));
+          }
+
+          if (position.y <= 561) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y + stepSize,
+            }));
+          }
+        }
+        //////////////////////////////////////////
+        // Bottom Town Area right side first half//
+        //////////////////////////////////////////
+        if (position.x + baseLine > 920 && position.x <= 1050 && position.y > 431) {
+
+          if (position.y >= 616) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y - stepSize,
+            }));
+          }
+          if (position.y <= 561) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y + stepSize,
+            }));
+          }
+        }
+        ////////////////////////////////////////
+        // Bottom Town Area right side door area //
+        //////////////////////////////////////////
+        if (position.x + baseLine >= 1050 && position.x <= 1080 && position.y > 431) {
+          if (position.y <= 521) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y + stepSize,
+            }));
+          }
+          if (position.y >= 616) {
+            setPosition(prev => ({
+              x: prev.x,
+              y: prev.y - stepSize,
+            }));
+          }
+        }
+        ///////////////////////////////////////////
+        // Bottom Town Area left side second half//
+        //////////////////////////////////////////
+        if (position.x + baseLine > 1080 && position.x >= 660 && position.y > 431) {
+
+          if (position.x + baseLine >= 1110) {
+            setPosition(prev => ({
+              x: prev.x - stepSize,
               y: prev.y,
             }));
           }
