@@ -4,11 +4,11 @@ import useKeyPress from '../../hooks/use-key-press'
 import useWalk from '../../hooks/use-walk'
 import useWindowSize from '../../hooks/window-size/useWindowSize'
 import town from '../../assets/town.png'
-import aboutMe from '../../assets/aboutMe.jpeg'
+import AboutMe from '../../MyPages/AboutMe'
 
 
 export default function Player({skin}) {
-  const title = ["<AboutMe", <br/>, "style={{", <br/>, "commitment: 100%,", <br/>, "passion: 100%,",<br/>, "programming=True", <br/>,"}}",<br/>, "/>"]
+ 
 
   const { dir, step, walk, position } = useWalk()
   const {width, height} = useWindowSize()
@@ -37,20 +37,17 @@ export default function Player({skin}) {
   if (position.x + aboutMeDoorX > 1155 && position.x + aboutMeDoorX < 1176 && position.y === 306) {
     document.getElementById('root').style.backgroundImage = 'none'
     document.getElementById('root').style.backgroundColor = "#2D2D2D"
+    document.getElementById("main").classList.remove("map-alignment")
     return(
-      <div  style={{
-        color: 'white', 
-        fontFamily: 'Ubuntu',
-        // textAlign: 'center',
-        // fontSize: '12px'
-        }}>
-        <h1 className="title">
-          {title}
-        </h1>
-      </div>
+      <>
+          <AboutMe/>
+      </>
     )
   } else {
     // document.getElementById('root').style.backgroundImage = `url(${town})`
+    if (document.getElementById("main")) {
+      document.getElementById("main").classList.add("map-alignment")
+    }
     return (
       <>
       <img id="map" src={town} alt=""/>

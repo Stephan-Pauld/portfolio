@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 * {
   margin: 0;
@@ -9,22 +11,41 @@ body {
   background-color: #2D2D2D;
 }
 
-#map {
-
-}
 .map-alignment {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* #root {
-  background-color: #2D2D2D;
-  height: 100vh;
-  background-repeat: no-repeat ;
-} */
-
 
 .title {
   padding-top: 5%;
   margin-left: 5%;
+}
+
+.title-font{
+  font-family: Ubuntu;
+  font-size: 25px;
+  color: rgb(173, 235, 234);
+  font-weight: 800;
+
+  /* background-color: rgb(31, 31, 31); */
+  text-shadow: rgb(0, 0, 0) 3px 1px 4px;
+  margin: 4% 0 0 4%;
+}
+.heading {
+  font-family: Rubik;
+  font-size: 28px;
+  text-align: center;
+  color: rgb(173, 235, 234);
+  font-weight: 800;
+  text-shadow: rgba(20, 20, 20, 0.89) 3px 1px 4px;
+}
+.body-text{
+  margin: 2%;
+  font-family: Rubik;
+  /* font-size: 28px; */
+  text-align: center;
+  color: rgb(173, 235, 234);
+  font-weight: 800;
+  text-shadow: rgba(20, 20, 20, 0.89) 3px 1px 4px;
 }

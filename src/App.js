@@ -12,7 +12,7 @@ export default function App() {
 
 
   return (
-      <div className="map-alignment">
+      <div id="main" className="map-alignment">
       <Player
       skin={m2}
       />
