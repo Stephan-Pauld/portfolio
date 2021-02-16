@@ -24,19 +24,19 @@ body {
 
 .title-font{
   font-family: Ubuntu;
-  font-size: 25px;
+  font-size: 22px;
   color: rgb(173, 235, 234);
   font-weight: 800;
 
   /* background-color: rgb(31, 31, 31); */
   text-shadow: rgb(0, 0, 0) 3px 1px 4px;
-  margin: 4% 0 0 4%;
+  margin: 1% 0 0 1%;
 }
 .heading {
   font-family: Rubik;
   font-size: 28px;
   text-align: center;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
   color: rgb(173, 235, 234);
   font-weight: 800;
   text-shadow: rgba(20, 20, 20, 0.89) 3px 1px 4px;
@@ -46,8 +46,29 @@ body {
   text-align: center;
   color: rgb(173, 235, 234);
   text-shadow: rgba(20, 20, 20, 0.89) 3px 1px 4px;
+  margin-bottom: 2%;
+}
+.intro{
+  margin-bottom: 1%;
 }
 p{
-  font-size: 1.2rem;
-  margin-bottom: 2%;
+  margin-bottom: .2%;
+}
+.about-pic-container {
+  margin: auto;
+  width: 50%;
+}
+.my-pics {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-pics {
+  margin: 2%;
+  border-radius: 2%;
+  box-shadow: 4px 6px 19px 2px rgba(0,0,0,0.31);
+}
+.picture-text{
+  display: flex;
+  justify-content: space-around;
 }
