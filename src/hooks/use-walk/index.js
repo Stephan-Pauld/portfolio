@@ -286,7 +286,7 @@ export default function useWalk() {
         //////////////////////////////////////////
         // Bottom Town Area left side first half//
         //////////////////////////////////////////
-        if (position.x + baseLine < 860 && position.x >= 725 && position.y > 431) {
+        if (position.x + baseLine < 860 && position.x + baseLine >= 725 && position.y > 431) {
 
           if (position.y >= 616) {
             setPosition(prev => ({
@@ -304,7 +304,7 @@ export default function useWalk() {
         ////////////////////////////////////////
         // Bottom Town Area left side door area //
         //////////////////////////////////////////
-        if (position.x + baseLine <= 720 && position.x >= 700 && position.y > 431) {
+        if (position.x + baseLine <= 720 && position.x + baseLine >= 700 && position.y > 431) {
           if (position.y <= 521) {
             setPosition(prev => ({
               x: prev.x,
@@ -321,7 +321,7 @@ export default function useWalk() {
         ///////////////////////////////////////////
         // Bottom Town Area left side second half//
         //////////////////////////////////////////
-        if (position.x + baseLine < 700 && position.x >= 660 && position.y > 431) {
+        if (position.x + baseLine < 700 && position.x + baseLine >= 660 && position.y > 431) {
 
           if (position.x + baseLine <= 660) {
             setPosition(prev => ({
@@ -347,7 +347,7 @@ export default function useWalk() {
         //////////////////////////////////////////
         // Bottom Town Area right side first half//
         //////////////////////////////////////////
-        if (position.x + baseLine > 920 && position.x <= 1050 && position.y > 431) {
+        if (position.x + baseLine > 920 && position.x + baseLine <= 1050 && position.y > 431) {
 
           if (position.y >= 616) {
             setPosition(prev => ({
@@ -365,7 +365,7 @@ export default function useWalk() {
         ////////////////////////////////////////
         // Bottom Town Area right side door area //
         //////////////////////////////////////////
-        if (position.x + baseLine >= 1050 && position.x <= 1080 && position.y > 431) {
+        if (position.x + baseLine >= 1050 && position.x + baseLine <= 1080 && position.y > 431) {
           if (position.y <= 521) {
             setPosition(prev => ({
               x: prev.x,
@@ -382,7 +382,7 @@ export default function useWalk() {
         ///////////////////////////////////////////
         // Bottom Town Area left side second half//
         //////////////////////////////////////////
-        if (position.x + baseLine > 1080 && position.x >= 660 && position.y > 431) {
+        if (position.x + baseLine > 1080 && position.x + baseLine >= 660 && position.y > 431) {
 
           if (position.x + baseLine >= 1110) {
             setPosition(prev => ({
