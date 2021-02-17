@@ -41,7 +41,7 @@ body {
   font-weight: 800;
   text-shadow: rgba(20, 20, 20, 0.89) 3px 1px 4px;
 }
-.body-text{
+.body-text , a{
   font-family: Rubik;
   text-align: center;
   color: rgb(173, 235, 234);
@@ -71,4 +71,52 @@ p{
 .picture-text{
   display: flex;
   justify-content: space-around;
+}
+
+/* PORTFOLIO */
+
+.project-pics {
+  border-radius: 2%;
+  width: 100%;
+  transition: .5s ease;
+}
+.project-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+  width: 90%;
+}
+.project-container {
+  margin: 2%;
+  width: 400px;
+  height: 400px;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s ease;
+  opacity: 0;
+}
+
+.project-container:hover .project-pics {
+  opacity: 0.3;
+}
+
+.project-container:hover .overlay {
+  opacity: 1;
+}
+.project-text{
+  position: absolute;
+  top: 40%;
+  font-family: Rubik;
+  text-align: center;
+  color: rgb(173, 235, 234);
+  margin-bottom: 2%;
+}
+.git{
+  text-decoration: underline;
+  margin: 5%;
 }

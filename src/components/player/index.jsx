@@ -36,6 +36,7 @@ export default function Player({ skin }) {
     position.x + aboutMeDoorX < 1176 &&
     position.y === 306
   ) {
+    /// ABOUT ME PAGE!!!!!
     document.getElementById("root").style.backgroundImage = "none";
     document.getElementById("root").style.backgroundColor = "#2D2D2D";
     document.getElementById("main").classList.remove("map-alignment");
@@ -51,10 +52,14 @@ export default function Player({ skin }) {
       </>
     );
   } else if(
+    
     position.x + aboutMeDoorX >= 575 &&
     position.x + aboutMeDoorX <= 600 &&
     position.y <= 301 
   ) {
+    document.getElementById("root").style.backgroundImage = "none";
+    document.getElementById("root").style.backgroundColor = "#2D2D2D";
+    document.getElementById("main").classList.remove("map-alignment");
     return (
       <>
         <Project />
@@ -72,6 +77,9 @@ export default function Player({ skin }) {
     position.x + aboutMeDoorX <= 1080 &&
     position.y <= 526 && position.y >= 500
   ) {
+    document.getElementById("root").style.backgroundImage = "none";
+    document.getElementById("root").style.backgroundColor = "#2D2D2D";
+    document.getElementById("main").classList.remove("map-alignment");
     return (
       <>
         <Contact />
