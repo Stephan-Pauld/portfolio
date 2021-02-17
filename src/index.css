@@ -17,6 +17,10 @@ body {
   align-items: center;
 }
 
+#root{
+  height: 100vh;
+}
+
 .title {
   padding-top: 5%;
   margin-left: 5%;
@@ -42,7 +46,8 @@ body {
   text-shadow: rgba(20, 20, 20, 0.89) 3px 1px 4px;
 }
 .body-text , a{
-  font-family: Rubik;
+  /* font-family: Rubik; */
+  font-size: 12px;
   text-align: center;
   color: rgb(173, 235, 234);
   text-shadow: rgba(20, 20, 20, 0.89) 3px 1px 4px;
@@ -55,25 +60,29 @@ p{
   margin-bottom: .2%;
 }
 .about-pic-container {
+  display: flex;
+  justify-content: center;
   margin: auto;
   width: 50%;
 }
 .my-pics {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 40%;
 }
+
 .about-pics {
   margin: 2%;
   border-radius: 2%;
   box-shadow: 4px 6px 19px 2px rgba(0,0,0,0.31);
 }
-.picture-text{
-  display: flex;
-  justify-content: space-around;
-}
 
 /* PORTFOLIO */
+h5 {
+  
+}
 
 .project-pics {
   border-radius: 2%;
@@ -119,4 +128,9 @@ p{
 .git{
   text-decoration: underline;
   margin: 5%;
+}
+
+.from-left {
+  font-size: 14px;
+  padding: .5rem 1rem;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Player from './components/player'
 import m1 from './assets/sprites/m1.png'
 import m2 from './assets/sprites/m2.png'

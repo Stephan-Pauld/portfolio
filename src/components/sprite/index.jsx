@@ -19,7 +19,7 @@ export default function Sprite({image, data, position}) {
       backgroundPosition: `-${x}px -${y}px`
     }}
     >
-      <h5 style={{
+      {/* <h5 style={{
         position: "absolute",
       top: '-63px',
       backgroundColor:'white',
@@ -28,7 +28,7 @@ export default function Sprite({image, data, position}) {
         Y:{position.y}
         <br/>
         width: {window.innerWidth}
-      </h5>
+      </h5> */}
   </div>
     </>
   )

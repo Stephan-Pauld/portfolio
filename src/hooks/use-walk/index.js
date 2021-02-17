@@ -34,6 +34,12 @@ export default function useWalk() {
     });
   }
 
+
+  const backToTown = (x, y) => {
+    setPosition({ x: x - playerPosWidth, y: y });
+    setDir(0);
+  }
+
   const walk = (dir) => {
     const change = width - positionWidth
     const baseLine = (1920 - width) / 2
@@ -431,5 +437,6 @@ export default function useWalk() {
     dir,
     step,
     position,
+    backToTown,
   }
 }
