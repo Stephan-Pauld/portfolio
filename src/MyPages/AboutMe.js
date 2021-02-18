@@ -51,7 +51,7 @@ export default function AboutMe({ backToTown }) {
           <h4 className="intro">I'm a full stack web developer based in Lethbridge, AB.</h4>
           <p>Throughout the day I'm A full stack developer. During the evenings I spend my time working on personal projects and gaming.</p>
 
-          <p>My most recent project is this <span style={{ textDecoration: "underline" }}>portfolio</span> made with functional React. Next I will be working with a QR scanner using React Native</p>
+          <p>My most recent project is this <span className="recent-project" onClick={()=> socialLinks('https://github.com/Stephan-Pauld/portfolio')} style={{ textDecoration: "underline" }}>portfolio</span> made with functional React. Next I will be working with a QR scanner using React Native</p>
         </div>
 
 
