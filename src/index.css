@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 * {
   margin: 0;
@@ -21,7 +21,7 @@ body {
 .nes-list.is-disc li::before {
   color: rgb(203, 236, 126);
 }
-#root{
+#root {
   height: 100vh;
 }
 
@@ -30,7 +30,7 @@ body {
   margin-left: 5%;
 }
 
-.title-font{
+.title-font {
   font-family: Ubuntu;
   font-size: 22px;
   color: rgb(173, 235, 234);
@@ -49,7 +49,8 @@ body {
   font-weight: 800;
   text-shadow: rgba(20, 20, 20, 0.89) 3px 1px 4px;
 }
-.body-text , a{
+.body-text,
+a {
   /* font-family: Rubik; */
   font-size: 12px;
   text-align: center;
@@ -59,7 +60,7 @@ body {
   width: 70%;
   margin-bottom: 2%;
 }
-.intro{
+.intro {
   margin-bottom: 1%;
   font-size: 17px;
 }
@@ -77,9 +78,9 @@ body {
   display: flex;
   justify-content: space-around;
 }
-p{
+p {
   font-size: 15px;
-  margin-bottom: .2%;
+  margin-bottom: 0.2%;
   margin-top: 2%;
 }
 .about-pic-container {
@@ -96,13 +97,13 @@ p{
   width: 40%;
   text-align: center;
   color: rgb(173, 235, 234);
-  text-shadow: rgba(20, 20, 20, 0.89) 3px 1px
+  text-shadow: rgba(20, 20, 20, 0.89) 3px 1px;
 }
 
 .about-pics {
   margin: 2%;
   border-radius: 2%;
-  box-shadow: 4px 6px 19px 2px rgba(0,0,0,0.31);
+  box-shadow: 4px 6px 19px 2px rgba(0, 0, 0, 0.31);
 }
 
 /* PORTFOLIO */
@@ -111,28 +112,30 @@ h6 {
 }
 
 .project-pics {
+  height: 300px;
+  width: 550px;
   border-radius: 2%;
-  width: 100%;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
-.project-page {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin: auto;
-  width: 90%;
+.project-desc {
+  color: white;
 }
+.project-desc-container {
+  width: 40%;
+  
+}
+
 .project-container {
-  margin: 2%;
-  width: 400px;
-  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4%;
 }
 
 .overlay {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
 }
 
@@ -143,7 +146,7 @@ h6 {
 .project-container:hover .overlay {
   opacity: 1;
 }
-.project-text{
+.project-text {
   position: absolute;
   top: 40%;
   font-family: Rubik;
@@ -151,12 +154,12 @@ h6 {
   color: rgb(173, 235, 234);
   margin-bottom: 2%;
 }
-.git{
+.git {
   text-decoration: underline;
   margin: 5%;
 }
 
 .from-left {
   font-size: 14px;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }

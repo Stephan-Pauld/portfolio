@@ -8,7 +8,6 @@ import AboutMe from "../../MyPages/AboutMe";
 import Project from "../../MyPages/Projects";
 import Contact from "../../MyPages/Contact";
 
-
 export default function Player({ skin }) {
   document.getElementById("root").style.backgroundColor = "#2d2d2d";
 
@@ -17,7 +16,16 @@ export default function Player({ skin }) {
   const aboutMeDoorX = (1920 - width) / 2;
 
   useKeyPress((e) => {
-    walk(e.key.replace("Arrow", "").toLowerCase());
+    const directions = ["up", "down", "left", "right"];
+
+    const direction = e.key.replace("Arrow", "").toLowerCase();
+
+    // this conditional stops app from crashing if
+    // ANYTHING other than arrows are pressed
+    if (!directions.includes(direction)) {
+      return;
+    }
+    walk(direction);
     e.preventDefault();
   });
 
@@ -59,11 +67,10 @@ export default function Player({ skin }) {
     document.getElementById("main").classList.remove("map-alignment");
     return (
       <>
-        <Contact backToTown={backToTown}/>
+        <Contact backToTown={backToTown} />
       </>
     );
   } else {
-
     if (document.getElementById("main")) {
       document.getElementById("main").classList.add("map-alignment");
     }

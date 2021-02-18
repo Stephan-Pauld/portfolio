@@ -7,11 +7,4 @@ export default function useKeyPress(fn) {
     return () => window.removeEventListener("keydown", fn);
   }, [fn])
 
-
-
-  return (
-    <div>
-      
-    </div>
-  )
 }
