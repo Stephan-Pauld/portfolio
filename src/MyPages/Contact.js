@@ -1,12 +1,43 @@
-import React from 'react'
-import { Button } from "nes-react";
-import { Icon } from "nes-react";
-import { Balloon } from "nes-react";
-import { Container } from "nes-react";
+import React, { useState } from 'react'
+import { Button, Container, Balloon, Icon, TextInput, TextArea } from "nes-react";
+import emailjs from 'emailjs-com';
+import { templateId, serviceId, userId } from '../consts'
 
 export default function Contact({ backToTown }) {
 
+  const [submitted, setSubmitted] = useState(false);
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
+
   const title = ["<ContactMe", <br />, "    style={{", <br />, "        commitment: 100%,", <br />, "        passion: 100%,", <br />, "        programming=True", <br />, "    }}", <br />, "/>"]
+
+
+  const submitButton = () => {
+    if (name !== undefined || email !== undefined || message !== undefined) {
+      if (name.length > 2 || message.length > 15 || email.length > 1) {
+        if (email.includes("@")) {
+          setSubmitted(!submitted)
+          setName("");
+          setEmail("");
+
+          const templateParams = {
+            name,
+            email,
+            message
+          }
+
+          emailjs.send(serviceId, templateId, templateParams, userId)
+            .then(function (response) {
+              console.log('SUCCESS!', response.status, response.text);
+            }, function (error) {
+              console.log('FAILED...', error);
+            });
+        }
+      }
+    }
+  }
+
   return (
     <>
       <div style={{ display: 'flex', justifyContent: 'space-between', margin: '3% 5% 3% 5%' }}>
@@ -36,14 +67,39 @@ export default function Contact({ backToTown }) {
         </div>
       </div>
 
-
-
-      <div style={{width: '55%', margin: 'auto'}}>
+      <div style={{ width: '80%', margin: 'auto' }}>
         <Container
-          title={"THIS IS IT"}
+          title={"Contact Me"}
           dark={true}
           children={
-            "This is the stufff"
+            <>
+              <div>
+                <TextInput
+                  label={"Name"}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div>
+                <TextInput
+                  value={email}
+                  label={"Email"}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div>
+                <TextArea
+                  label={"Message"}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
+              </div>
+              <Button
+                children={'Submit'}
+                success={!submitted}
+                primary={submitted}
+                onClick={() => submitButton()}
+              />
+            </>
           }
         />
       </div>
