@@ -2,8 +2,10 @@ import React from 'react'
 import { Button, Icon, Balloon, Container, List } from "nes-react";
 import '../index.css'
 import Tweeter from '../assets/photos/Tweeter.png'
-import scheduler from '../assets/photos/Scheduler.png'
+import Scheduler from '../assets/photos/Scheduler.png'
 import TinyApp from '../assets/photos/TinyApp.png'
+import Warzone from '../assets/photos/warzone.png'
+import BuyAndSell from '../assets/photos/buyandsell.png'
 
 
 export default function Projects({ backToTown }) {
@@ -34,12 +36,71 @@ export default function Projects({ backToTown }) {
             icon={"heart"}
           />
           <Icon
-
             icon={"heart"}
           />
         </div>
       </div>
 
+
+      <div className="project-container">
+        <div className="project-desc-container">
+          <div className="project-desc">
+            <h4>
+              React Scheduler
+            </h4>
+            <p>
+              This react scheduler was my first introduction to react. Using functional react and custom hooks I created a scheduler that allowed students to book a specific time slot with a teacher for 1-1 mentoring.
+            </p>
+          </div>
+
+          <div>
+          <Button className="is-primary">Github</Button>
+          </div>
+        </div>
+        <div>
+          <img className="project-pics" src={Scheduler} alt="Stephan and Wife at DisneyLand" />
+        </div>
+      </div>
+
+      <div className="project-container">
+        <div>
+          <img className="project-pics" src={Warzone} alt="Stephan and Wife at DisneyLand" />
+        </div>
+        <div className="project-desc-container">
+          <div className="project-desc">
+            <h4>
+              Warzone- Stat Arena
+            </h4>
+            <p>
+              Stat Arena was an amazing project using, mySQL, Redis.io, Express and functional React. Using the Modern-Warfare API. I got realtime statistics so players could use their gamer tag on the site and see their realtime statistics in the form of a personal profile and compare those stats to their friends or Professional Esports players. Stat Arena also implemented a LIVE overlay with realtime updating stats to be used on any streaming platform IE: Twitch, YouTube or FaceBook-Gaming so a streamers viewers could see the content creators statistics change realtime.
+            </p>
+          </div>
+
+          <div>
+          <Button className="is-primary">Github</Button>
+          </div>
+        </div>
+      </div>
+
+      <div className="project-container">
+        <div className="project-desc-container">
+          <div className="project-desc">
+            <h4>
+              Buy And Sell - Electronics Haven
+            </h4>
+            <p>
+              Electronic Haven is a small e-Commerce website where an admin can create, read, update and delete products or categories on their site. Users can contact the seller via a custom messaging system through the website or twillio. When a price is negotiated an admin can mark an item for the price it was sold for and set the product as sold or out of stock.
+            </p>
+          </div>
+
+          <div>
+          <Button className="is-primary">Github</Button>
+          </div>
+        </div>
+        <div>
+          <img className="project-pics" src={BuyAndSell} alt="Stephan and Wife at DisneyLand" />
+        </div>
+      </div>
 
       <div className="project-container">
         <div>
@@ -62,14 +123,13 @@ export default function Projects({ backToTown }) {
       </div>
 
       <div className="project-container">
-  
         <div className="project-desc-container">
           <div className="project-desc">
             <h4>
-              Tweeter
+              Tiny App
             </h4>
             <p>
-              This project was my first push into really grasping css, mostly using flex-box. It also taught me a lot of basic crud operations and how a server and front end talk to eachother. This was strictly a learning project.
+              TinyApp is an account based URL shortener. This was an awesome project that taught me how to create RESTFUL API's and basic CRUD operations using and express server. 
             </p>
           </div>
 
@@ -81,13 +141,6 @@ export default function Projects({ backToTown }) {
           <img className="project-pics" src={TinyApp} alt="Stephan and Wife at DisneyLand" />
         </div>
       </div>
-
-
-
-
-
-
-
 
 
 
