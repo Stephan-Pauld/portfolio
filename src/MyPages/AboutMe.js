@@ -1,12 +1,21 @@
 import React from 'react'
-import { Button, Icon, Balloon, Container } from "nes-react";
+import { Button, Icon, Balloon, Container, List } from "nes-react";
 import '../index.css'
 import StefNess from '../assets/photos/disneyland.jpg'
 import dogs from '../assets/photos/boysCropped.jpg'
 
 export default function AboutMe({ backToTown }) {
-
+  const star = <Icon icon={"star"} small={true} />
+  const empty = <Icon icon={"star"} small={true} empty={true} />
   const title = ["<AboutMe", <br />, "    style={{", <br />, "        commitment: 100%,", <br />, "        passion: 100%,", <br />, "        programming=True", <br />, "    }}", <br />, "/>"]
+
+
+  const socialLinks = (url) => {
+    console.log("Catssss");
+    window.open(url)
+  }
+
+
 
   return (
     <>
@@ -45,6 +54,30 @@ export default function AboutMe({ backToTown }) {
           <p>My most recent project is this <span style={{ textDecoration: "underline" }}>portfolio</span> made with functional React. Next I will be working with a QR scanner using React Native</p>
         </div>
 
+
+        <div className="socials">
+          <div>
+            Get Social With Me!
+          </div>
+          <div className="social-icons">
+            <Icon
+            className={"socialicon"}
+              icon={"github"}
+              onClick={() => socialLinks('https://github.com/Stephan-Pauld')}
+            />
+            <Icon
+              icon={"gmail"}
+              />
+            <Icon
+              className={"socialicon"}
+              icon={"linkedin"}
+              onClick={() => socialLinks('https://www.linkedin.com/in/stephan-paul/')}
+            />
+          </div>
+        </div>
+
+
+
         <div className="about-pic-container">
 
           <div className="my-pics">
@@ -59,23 +92,73 @@ export default function AboutMe({ backToTown }) {
           </div>
         </div>
 
-        <div className="socials">
-          <div>
-            Get Social With Me!
-          </div>
-          <div className="social-icons">
-            <Icon
-              icon={"github"}
-            />
-            <Icon
-              icon={"gmail"}
-            />
-            <Icon
-              icon={"linkedin"}
-            />
-          </div>
-        </div>
+      </div>
 
+
+      <div className="skills-container">
+        <Container
+          title={"Languages"}
+          dark={true}
+          children={
+            <>
+              <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+
+                <div style={{ marginLeft: '33px' }}>
+                  <List solid={true}>
+                    <li>HTML{star}{star}{star}{star}{empty}</li>
+                    <li>CSS{star}{star}{star}{empty}{empty}</li>
+                  </List>
+                </div>
+                <div style={{ marginLeft: '33px' }}>
+                  <List solid={true}>
+                    <li>SQL{star}{star}{star}{star}{empty}</li>
+                    <li>SASS{star}{star}{empty}{empty}{empty}</li>
+                  </List>
+                </div>
+                <div style={{ marginLeft: '33px' }}>
+                  <List solid={true}>
+                    <li>JavaScript{star}{star}{star}{star}{star}</li>
+                    <li>Ruby{star}{star}{star}{empty}{empty}</li>
+                  </List>
+                </div>
+              </div>
+            </>
+          }
+        />
+      </div>
+
+      <div className="skills-container">
+        <Container
+          title={"Frameworks"}
+          dark={true}
+          children={
+            <>
+              <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+
+                <div style={{ marginLeft: '33px' }}>
+                  <List solid={true}>
+                    <li>React-Native</li>
+                    <li>React</li>
+                  </List>
+                </div>
+                <div style={{ marginLeft: '33px' }}>
+                  <List solid={true}>
+                    <li>Express</li>
+                    <li>Node</li>
+                    <li>BootStrap</li>
+                  </List>
+                </div>
+                <div style={{ marginLeft: '33px' }}>
+                  <List solid={true}>
+                    <li>.Net</li>
+                    <li>Rails</li>
+                    <li>jQuery</li>
+                  </List>
+                </div>
+              </div>
+            </>
+          }
+        />
       </div>
     </>
   )
