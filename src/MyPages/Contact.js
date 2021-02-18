@@ -1,26 +1,56 @@
 import React from 'react'
-import { Container } from "nes-react";
 import { Button } from "nes-react";
+import { Icon } from "nes-react";
+import { Balloon } from "nes-react";
+import { Container } from "nes-react";
 
-export default function Contact({backToTown}) {
+export default function Contact({ backToTown }) {
 
   const title = ["<ContactMe", <br />, "    style={{", <br />, "        commitment: 100%,", <br />, "        passion: 100%,", <br />, "        programming=True", <br />, "    }}", <br />, "/>"]
   return (
     <>
-      <div style={{
-        margin: 'auto',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        width:'80%',
-      }}>
-        <div style={{display: 'flex', justifyContent:'center', flexDirection:'column'}}>
-        <p style={{color: 'white'}}>Press here or Down <br/>Arrow to return to town</p>
-
-        <Button className="is-error" onClick={()=> backToTown(1075, 566)}>Back</Button>
+      <div style={{ display: 'flex', justifyContent: 'space-between', margin: '3% 5% 3% 5%' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', flexDirection: 'column', width: '15%' }}>
+          <Balloon
+            children={"Press here or down arrow to head back to town"}
+            fromLeft={true}
+          />
+          <Button className="is-error" onClick={() => backToTown(1170, 346)}>Town</Button>
+        </div>
+        <div>
+          <Icon
+            icon={"heart"}
+          />
+          <Icon
+            className={"is-empty"}
+            icon={"heart"}
+          />
+          <Icon
+            className={"is-empty"}
+            icon={"heart"}
+          />
+          <Icon
+            className={"is-empty"}
+            icon={"heart"}
+          />
         </div>
       </div>
-      {/* <Container>We're using containers from nes.css!</Container>; */}
+
+
+
+      <div style={{width: '55%', margin: 'auto'}}>
+        <Container
+          title={"THIS IS IT"}
+          dark={true}
+          children={
+            "This is the stufff"
+          }
+        />
+      </div>
+
+
+
+
     </>
   )
 }

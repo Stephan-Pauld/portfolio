@@ -10,7 +10,7 @@ import Contact from "../../MyPages/Contact";
 
 
 export default function Player({ skin }) {
-  document.getElementById("root").style.backgroundColor = "#2D2D2D";
+  document.getElementById("root").style.backgroundColor = "#4b4b4b";
 
   const { dir, step, walk, position, backToTown } = useWalk();
   const { width, height } = useWindowSize();
@@ -28,7 +28,7 @@ export default function Player({ skin }) {
   ) {
     /// ABOUT ME PAGE!!!!!
     document.getElementById("root").style.backgroundImage = "none";
-    document.getElementById("root").style.backgroundColor = "#2D2D2D";
+    // document.getElementById("root").style.backgroundColor = "#2D2D2D";
     document.getElementById("main").classList.remove("map-alignment");
     return (
       <>
@@ -41,7 +41,7 @@ export default function Player({ skin }) {
     position.y <= 301
   ) {
     document.getElementById("root").style.backgroundImage = "none";
-    document.getElementById("root").style.backgroundColor = "#2D2D2D";
+    // document.getElementById("root").style.backgroundColor = "#2D2D2D";
     document.getElementById("main").classList.remove("map-alignment");
     return (
       <>
@@ -55,7 +55,7 @@ export default function Player({ skin }) {
     position.y >= 500
   ) {
     document.getElementById("root").style.backgroundImage = "none";
-    document.getElementById("root").style.backgroundColor = "#2D2D2D";
+    // document.getElementById("root").style.backgroundColor = "#2D2D2D";
     document.getElementById("main").classList.remove("map-alignment");
     return (
       <>

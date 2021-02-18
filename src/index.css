@@ -8,9 +8,11 @@
   border: 0;
 }
 body {
-  background-color: #2D2D2D;
+  background-color: #4b4b4b;
 }
-
+.nes-container {
+  z-index: 1;
+}
 .map-alignment {
   display: flex;
   justify-content: center;
@@ -36,12 +38,12 @@ body {
   text-shadow: rgb(0, 0, 0) 3px 1px 4px;
   margin: 1% 0 0 1%;
 }
+
 .heading {
-  font-family: Rubik;
-  font-size: 28px;
+  font-size: 20px;
   text-align: center;
-  margin-bottom: 1%;
-  color: rgb(173, 235, 234);
+  margin-bottom: 2%;
+  color: rgb(177, 247, 245);
   font-weight: 800;
   text-shadow: rgba(20, 20, 20, 0.89) 3px 1px 4px;
 }
@@ -51,13 +53,32 @@ body {
   text-align: center;
   color: rgb(173, 235, 234);
   text-shadow: rgba(20, 20, 20, 0.89) 3px 1px 4px;
+  margin: auto;
+  width: 70%;
   margin-bottom: 2%;
 }
 .intro{
   margin-bottom: 1%;
+  font-size: 17px;
+}
+.socials {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(177, 247, 245);
+  width: 25%;
+  margin: auto;
+}
+.social-icons {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
 }
 p{
+  font-size: 15px;
   margin-bottom: .2%;
+  margin-top: 2%;
 }
 .about-pic-container {
   display: flex;
@@ -71,6 +92,9 @@ p{
   align-items: center;
   flex-direction: column;
   width: 40%;
+  text-align: center;
+  color: rgb(173, 235, 234);
+  text-shadow: rgba(20, 20, 20, 0.89) 3px 1px
 }
 
 .about-pics {
@@ -80,8 +104,8 @@ p{
 }
 
 /* PORTFOLIO */
-h5 {
-  
+h6 {
+  /* text-align: center; */
 }
 
 .project-pics {

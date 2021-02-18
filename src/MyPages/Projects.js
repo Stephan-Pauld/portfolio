@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button'
+import { Button, Icon, Balloon, Container } from "nes-react";
 import '../index.css'
 import tweeter from '../assets/photos/tweeter.png'
 import scheduler from '../assets/photos/Schedulerr.png'
