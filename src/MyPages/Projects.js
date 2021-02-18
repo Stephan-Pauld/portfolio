@@ -13,6 +13,11 @@ export default function Projects({ backToTown }) {
   const title = ["<Projects", <br />, "    style={{", <br />, "        commitment: 100%,", <br />, "        passion: 100%,", <br />, "        programming=True", <br />, "    }}", <br />, "/>"]
 
 
+  const githubButton = (url) => {
+    window.open(url)
+  }
+
+
 
   return (
     <>
@@ -53,7 +58,11 @@ export default function Projects({ backToTown }) {
           </div>
 
           <div>
-          <Button className="is-primary">Github</Button>
+            <Button
+              className="is-primary"
+              children={"Github"}
+              onClick={() => githubButton('https://github.com/Stephan-Pauld/scheduler')}
+            />
           </div>
         </div>
         <div>
@@ -76,7 +85,11 @@ export default function Projects({ backToTown }) {
           </div>
 
           <div>
-          <Button className="is-primary">Github</Button>
+            <Button
+              className="is-primary"
+              children={"Github"}
+              onClick={() => githubButton('https://github.com/Stephan-Pauld/WarzoneStatArena')}
+            />
           </div>
         </div>
       </div>
@@ -93,7 +106,11 @@ export default function Projects({ backToTown }) {
           </div>
 
           <div>
-          <Button className="is-primary">Github</Button>
+            <Button
+              className="is-primary"
+              children={"Github"}
+              onClick={() => githubButton('https://github.com/Stephan-Pauld/buy_and_sell')}
+            />
           </div>
         </div>
         <div>
@@ -116,7 +133,11 @@ export default function Projects({ backToTown }) {
           </div>
 
           <div>
-          <Button className="is-primary">Github</Button>
+            <Button
+              className="is-primary"
+              children={"Github"}
+              onClick={() => githubButton('https://github.com/Stephan-Pauld/tweeterApp')}
+            />
           </div>
         </div>
       </div>
@@ -128,12 +149,16 @@ export default function Projects({ backToTown }) {
               Tiny App
             </h4>
             <p>
-              TinyApp is an account based URL shortener. This was an awesome project that taught me how to create RESTFUL API's and basic CRUD operations using and express server. 
+              TinyApp is an account based URL shortener. This was an awesome project that taught me how to create RESTFUL API's and basic CRUD operations using and express server.
             </p>
           </div>
 
           <div>
-          <Button className="is-primary">Github</Button>
+            <Button
+              className="is-primary"
+              children={"Github"}
+              onClick={() => githubButton('https://github.com/Stephan-Pauld/tinyApp')}
+            />
           </div>
         </div>
         <div>
