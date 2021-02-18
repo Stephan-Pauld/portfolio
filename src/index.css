@@ -8,7 +8,7 @@
   border: 0;
 }
 body {
-  background-color: #4b4b4b;
+  background-color: #2d2d2d;
 }
 .nes-container {
   z-index: 1;
@@ -18,7 +18,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.nes-list.is-disc li::before {
+  color: rgb(203, 236, 126);
+}
 #root{
   height: 100vh;
 }

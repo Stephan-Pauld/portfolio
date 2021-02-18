@@ -10,7 +10,7 @@ import Contact from "../../MyPages/Contact";
 
 
 export default function Player({ skin }) {
-  document.getElementById("root").style.backgroundColor = "#4b4b4b";
+  document.getElementById("root").style.backgroundColor = "#2d2d2d";
 
   const { dir, step, walk, position, backToTown } = useWalk();
   const { width, height } = useWindowSize();
