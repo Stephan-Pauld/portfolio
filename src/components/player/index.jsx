@@ -70,7 +70,7 @@ export default function Player({ skin }) {
   ) {
     document.getElementById("root").style.backgroundImage = "none";
     document.getElementById("main").classList.remove("map-alignment");
-    document.getElementById("root").style.height = null;
+    document.getElementById("root").style.height = '100vh';
 
     return (
       <>
