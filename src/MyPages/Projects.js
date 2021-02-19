@@ -21,7 +21,7 @@ export default function Projects({ backToTown }) {
 
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'space-between', margin: '3% 5% 3% 5%' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', margin: '0 5% 3% 5%' }}>
         <div style={{ display: 'flex', justifyContent: 'flex-end', flexDirection: 'column', width: '15%' }}>
           <Balloon
             children={"Press here or down arrow to head back to town"}
