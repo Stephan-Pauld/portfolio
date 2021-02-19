@@ -4,13 +4,14 @@ import useKeyPress from "../../hooks/use-key-press";
 import useWalk from "../../hooks/use-walk";
 import useWindowSize from "../../hooks/window-size/useWindowSize";
 import town from "../../assets/town.png";
-import townWithTitles from '../../assets/photos/townAndTitles.png'
+import townWithTitles from "../../assets/photos/townAndTitles.png";
 import AboutMe from "../../MyPages/AboutMe";
 import Project from "../../MyPages/Projects";
 import Contact from "../../MyPages/Contact";
 
 export default function Player({ skin }) {
   document.getElementById("root").style.backgroundColor = "#2d2d2d";
+  document.getElementById("root").style.height = "100vh";
 
   const { dir, step, walk, position, backToTown } = useWalk();
   const { width, height } = useWindowSize();
@@ -39,6 +40,7 @@ export default function Player({ skin }) {
     document.getElementById("root").style.backgroundImage = "none";
     document.getElementById("main").classList.remove("map-alignment");
     document.getElementById("root").style.paddingBottom = "1px";
+    document.getElementById("root").style.height = null;
 
     return (
       <>
@@ -53,6 +55,8 @@ export default function Player({ skin }) {
     document.getElementById("root").style.backgroundImage = "none";
     document.getElementById("root").style.paddingBottom = "1px";
     document.getElementById("main").classList.remove("map-alignment");
+    document.getElementById("root").style.height = null;
+
     return (
       <>
         <Project backToTown={backToTown} />
@@ -65,8 +69,9 @@ export default function Player({ skin }) {
     position.y >= 500
   ) {
     document.getElementById("root").style.backgroundImage = "none";
-    
     document.getElementById("main").classList.remove("map-alignment");
+    document.getElementById("root").style.height = null;
+
     return (
       <>
         <Contact backToTown={backToTown} />

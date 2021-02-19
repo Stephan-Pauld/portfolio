@@ -19,9 +19,6 @@ body {
 .nes-list.is-disc li::before {
   color: rgb(203, 236, 126);
 }
-#root {
-  /* height: 100vh; */
-}
 
 .title {
   padding-top: 5%;
