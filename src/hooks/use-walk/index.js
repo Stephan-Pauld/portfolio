@@ -50,6 +50,12 @@ export default function useWalk() {
         ///////////////////////
         // TOP FENCE PATHING //
         ///////////////////////
+        if (position.y < 21) {
+          setPosition(prev => ({
+            x: prev.x,
+            y: prev.y + stepSize,
+          }));
+        }
         if (position.y <= 236) {
           if (position.x + baseLine <= 855) {
             setPosition(prev => ({

@@ -27,7 +27,7 @@ export default function Projects({ backToTown }) {
             children={"Press here or down arrow to head back to town"}
             fromLeft={true}
           />
-          <Button className="is-error" onClick={() => backToTown(1170, 346)}>Town</Button>
+          <Button className="is-error" onClick={() => backToTown(590, 346)}>Town</Button>
         </div>
         <div>
           <Icon
@@ -164,6 +164,9 @@ export default function Projects({ backToTown }) {
         <div>
           <img className="project-pics" src={TinyApp} alt="Stephan and Wife at DisneyLand" />
         </div>
+      </div>
+      <div style={{marginTop: '4%'}}>
+
       </div>
     </>
   )

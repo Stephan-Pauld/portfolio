@@ -4,6 +4,7 @@ import useKeyPress from "../../hooks/use-key-press";
 import useWalk from "../../hooks/use-walk";
 import useWindowSize from "../../hooks/window-size/useWindowSize";
 import town from "../../assets/town.png";
+import townWithTitles from '../../assets/photos/townAndTitles.png'
 import AboutMe from "../../MyPages/AboutMe";
 import Project from "../../MyPages/Projects";
 import Contact from "../../MyPages/Contact";
@@ -36,8 +37,9 @@ export default function Player({ skin }) {
   ) {
     /// ABOUT ME PAGE!!!!!
     document.getElementById("root").style.backgroundImage = "none";
-    // document.getElementById("root").style.backgroundColor = "#2D2D2D";
     document.getElementById("main").classList.remove("map-alignment");
+    document.getElementById("root").style.paddingBottom = "1px";
+
     return (
       <>
         <AboutMe backToTown={backToTown} />
@@ -49,7 +51,7 @@ export default function Player({ skin }) {
     position.y <= 301
   ) {
     document.getElementById("root").style.backgroundImage = "none";
-    // document.getElementById("root").style.backgroundColor = "#2D2D2D";
+    document.getElementById("root").style.paddingBottom = "1px";
     document.getElementById("main").classList.remove("map-alignment");
     return (
       <>
@@ -63,7 +65,7 @@ export default function Player({ skin }) {
     position.y >= 500
   ) {
     document.getElementById("root").style.backgroundImage = "none";
-    // document.getElementById("root").style.backgroundColor = "#2D2D2D";
+    
     document.getElementById("main").classList.remove("map-alignment");
     return (
       <>
@@ -76,7 +78,7 @@ export default function Player({ skin }) {
     }
     return (
       <>
-        <img id="map" src={town} alt="" />
+        <img id="map" src={townWithTitles} alt="" />
         <Actor sprite={skin} step={step} dir={dir} position={position} />
       </>
     );

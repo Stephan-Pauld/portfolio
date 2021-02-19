@@ -5,10 +5,11 @@ import { templateId, serviceId, userId } from '../consts'
 
 export default function Contact({ backToTown }) {
 
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(true);
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
+  const [buttonText, setButtonText] = useState('Submit');
 
   const title = ["<ContactMe", <br />, "    style={{", <br />, "        commitment: 100%,", <br />, "        passion: 100%,", <br />, "        programming=True", <br />, "    }}", <br />, "/>"]
 
@@ -17,6 +18,7 @@ export default function Contact({ backToTown }) {
     if (name !== undefined || email !== undefined || message !== undefined) {
       if (name.length > 2 || message.length > 15 || email.length > 1) {
         if (email.includes("@")) {
+          setButtonText("E-Mail Sent!")
           setSubmitted(!submitted)
           setName("");
           setEmail("");
@@ -46,7 +48,7 @@ export default function Contact({ backToTown }) {
             children={"Press here or down arrow to head back to town"}
             fromLeft={true}
           />
-          <Button className="is-error" onClick={() => backToTown(1170, 346)}>Town</Button>
+          <Button className="is-error" onClick={() => backToTown(1070, 566)}>Town</Button>
         </div>
         <div>
           <Icon
@@ -94,7 +96,7 @@ export default function Contact({ backToTown }) {
                 />
               </div>
               <Button
-                children={'Submit'}
+                children={buttonText}
                 success={!submitted}
                 primary={submitted}
                 onClick={() => submitButton()}

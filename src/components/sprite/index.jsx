@@ -4,7 +4,7 @@ export default function Sprite({image, data, position}) {
   const {y, x, h, w} = data
 
 
-
+console.log(position);
   return (
 <>
   <div
