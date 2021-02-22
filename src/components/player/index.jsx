@@ -43,9 +43,7 @@ export default function Player({ skin }) {
     document.getElementById("root").style.height = null;
 
     return (
-      <>
         <AboutMe backToTown={backToTown} />
-      </>
     );
   } else if (
     position.x + aboutMeDoorX >= 575 &&
@@ -59,9 +57,7 @@ export default function Player({ skin }) {
     document.getElementById("root").style.height = null;
 
     return (
-      <>
         <Project backToTown={backToTown} />
-      </>
     );
   } else if (
     position.x + aboutMeDoorX >= 1055 &&
@@ -75,9 +71,7 @@ export default function Player({ skin }) {
     document.getElementById("root").style.height = "100vh";
 
     return (
-      <>
         <Contact backToTown={backToTown} />
-      </>
     );
   } else {
     if (document.getElementById("main")) {
