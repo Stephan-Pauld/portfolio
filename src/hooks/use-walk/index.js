@@ -40,6 +40,10 @@ export default function useWalk() {
     setDir(0);
   }
 
+  const clickedOnHouse = (x, y) => {
+    setPosition({ x: x - playerPosWidth, y: y });
+  }
+
   const walk = (dir) => {
     const change = width - positionWidth
     const baseLine = (1920 - width) / 2
@@ -421,11 +425,6 @@ export default function useWalk() {
       }
       return directions[dir]
     })
-
-
-
-
-
     setStep(prev => prev < maxSteps - 1 ? prev + 1 : 0)
   }
 
@@ -444,5 +443,6 @@ export default function useWalk() {
     step,
     position,
     backToTown,
+    clickedOnHouse,
   }
 }
